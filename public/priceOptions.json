@@ -1,0 +1,54 @@
+{
+    "priceOptions": [
+        {
+            "id": 1,
+            "name": "Basic Membership",
+            "features": [
+                "Access to cardio equipment",
+                "Use of free weights",
+                "Locker room access",
+                "One complimentary fitness assessment",
+                "Access to group fitness classes (limited)"
+            ],
+            "price": "$29.99 per month"
+        },
+        {
+            "id": 2,
+            "name": "Premium Membership",
+            "features": [
+                "Access to all gym equipment",
+                "Unlimited group fitness classes",
+                "Personalized workout plans",
+                "Monthly nutrition consultation",
+                "Access to swimming pool",
+                "Sauna and steam room access"
+            ],
+            "price": "$49.99 per month"
+        },
+        {
+            "id": 3,
+            "name": "Family Membership",
+            "features": [
+                "Access for up to 4 family members",
+                "Access to all gym equipment",
+                "Locker room access",
+                "Discounts on personal training sessions",
+                "Kids' play area access",
+                "Family group fitness classes"
+            ],
+            "price": "$79.99 per month"
+        },
+        {
+            "id": 4,
+            "name": "Student Membership",
+            "features": [
+                "Valid student ID required",
+                "Access to cardio equipment",
+                "Locker room access",
+                "Discounts on group fitness classes",
+                "Weekend access to premium amenities"
+            ],
+            "price": "$19.99 per month"
+        }
+    ]
+}
