@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import { Audio, Dna } from 'react-loader-spinner';
 
 
 const Phones = () => {
     const [phones, setPhones] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         /*
@@ -25,6 +27,7 @@ const Phones = () => {
                     return obj;
                 })
                 setPhones(phonesWithFakeData);
+                setIsLoading(false);
             })
 
     }, []);
@@ -33,6 +36,30 @@ const Phones = () => {
 
     return (
         <div>
+            <div className="flex justify-center gap-8">
+
+                {
+                    isLoading && <Audio
+                        height="80"
+                        width="80"
+                        radius="9"
+                        color="green"
+                        ariaLabel="loading"
+                        wrapperStyle
+                        wrapperClass
+                    />
+                }
+                {
+                    isLoading && <Dna
+                        visible={true}
+                        height="80"
+                        width="80"
+                        ariaLabel="dna-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="dna-wrapper"
+                    />
+                }
+            </div>
             <h2 className="text-5xl">{phones.length}</h2>
             <BarChart width={1200} height={500} data={phones}>
                 <Bar dataKey="price" fill="#8884d8" />
