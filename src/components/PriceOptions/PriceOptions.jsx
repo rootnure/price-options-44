@@ -6,7 +6,7 @@ const PriceOptions = () => {
     const [priceOptions, setPriceOptions] = useState([]);
 
     useEffect(() => {
-        fetch('priceOptions.json')
+        fetch('my-data.json')
             .then(res => res.json())
             .then(data => setPriceOptions(data.priceOptions))
     }, []);
